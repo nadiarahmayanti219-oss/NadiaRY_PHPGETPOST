@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --butter: #E8DFAA;
+    --butter-dark: #D3C78F;
+    --ivory: #F5EFC6;
+    --cream: #231815;
+    --brown: #4A2E27;
+    --brown-dark: #231815;
+    --text: #231815;
+    --border: #D3C78F;
+
+    --blue: #A5BCD6;
+    --blue-dark: #8AA5C4;
+
+    --merah: #4D0E12;
+    --merah-dark: #350A0D;
+
+    --green: #3F6B3A;
+    --green-dark: #2F5230;
+
+    --red: #A3262E;
+    --gray: #6F5F57;
+    --gray-dark: #54463F;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 35px 20px;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background-color: var(--cream);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Background setiap halaman */
+.halaman-1 {
+    background-image: linear-gradient(
+        rgba(35, 24, 21, 0.35),
+        rgba(35, 24, 21, 0.35)
+    ), url("img/bg1.jpg");
+}
+
+.halaman-2 {
+    background-image: linear-gradient(
+        rgba(35, 24, 21, 0.35),
+        rgba(35, 24, 21, 0.35)
+    ), url("img/bg2.jpg");
+}
+
+.halaman-3 {
+    background-image: linear-gradient(
+        rgba(35, 24, 21, 0.35),
+        rgba(35, 24, 21, 0.35)
+    ), url("img/bg3.jpg");
+}
+
+.halaman-4 {
+    background-image: linear-gradient(
+        rgba(35, 24, 21, 0.35),
+        rgba(35, 24, 21, 0.35)
+    ), url("img/bg4.jpg");
+}
+
+/* Kartu utama */
+.card {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px;
+    background-color: var(--ivory);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.card.kecil {
+    max-width: 600px;
+}
+
+/* Header halaman utama */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header .btn {
+    flex-shrink: 0;
+}
+
+/* Judul dan subjudul */
+h1 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--brown);
+    font-size: 28px;
+}
+
+h2,
+h3 {
+    color: var(--brown);
+}
+
+.sub {
+    margin: 8px 0 0;
+    color: var(--brown);
+    line-height: 1.6;
+}
+
+/* Informasi detail */
+p {
+    line-height: 1.6;
+}
+
+.item {
+    margin: 15px 0;
+    padding: 12px 14px;
+    background-color: #FBF7DF;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* Pembungkus tabel */
+.tabel-wrap {
+    width: 100%;
+    margin-top: 22px;
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--ivory);
+}
+
+th,
+td {
+    padding: 12px 10px;
+    border: 1px solid var(--border);
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    color: var(--brown-dark);
+    background-color: var(--butter);
+}
+
+tr:nth-child(even) {
+    background-color: #EFE8BA;
+}
+
+/* Form */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: var(--brown);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 11px 12px;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--text);
+    background-color: #FFFDF0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--brown);
+    box-shadow: 0 0 0 3px rgba(74, 46, 39, 0.15);
+}
+
+/* Tombol umum: Potting Soil */
+.btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 16px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--ivory);
+    background-color: var(--brown);
+    border: 1px solid var(--brown);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    color: var(--ivory);
+    background-color: var(--brown-dark);
+    transform: translateY(-2px);
+}
+
+/* Tombol detail: Cerulean Blue */
+.btn-detail {
+    color: var(--brown-dark);
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.btn-detail:hover {
+    color: var(--brown-dark);
+    background-color: var(--blue-dark);
+}
+
+/* Tombol kirim: Sceptre Red */
+.btn-simpan {
+    color: var(--ivory);
+    background-color: var(--merah);
+    border-color: var(--merah);
+}
+
+.btn-simpan:hover {
+    color: var(--ivory);
+    background-color: var(--merah-dark);
+}
+
+/* Tombol kembali: abu-abu kecokelatan */
+.btn-kembali {
+    color: var(--ivory);
+    background-color: var(--gray);
+    border-color: var(--gray);
+}
+
+.btn-kembali:hover {
+    color: var(--ivory);
+    background-color: var(--gray-dark);
+}
+
+/* Status mahasiswa */
+.lulus {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.tidak {
+    color: var(--red);
+    font-weight: bold;
+}
+
+/* Tampilan layar kecil */
+@media (max-width: 768px) {
+    body {
+        padding: 18px 10px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .header {
+        align-items: flex-start;
+    }
+
+    .tabel-wrap table {
+        min-width: 750px;
+    }
+
+    .btn {
+        padding: 9px 12px;
+    }
+}
